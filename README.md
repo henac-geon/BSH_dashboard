@@ -6,15 +6,16 @@ Business Startup Helper owner dashboard
 
 2. 해당 프로젝트 디렉토리로 이동후 패키지 설치
 
-:: 필수 패키지 설치
-npm i
-npm i @prisma/client
-npm i -D prisma
+:: 필수 패키지 설치   
+npm i   
+npm i @prisma/client   
+npm i -D prisma   
 
-:: Prisma Client 생성 (schema는 frontend\prisma\schema.prisma)
+:: Prisma Client 생성   
+(schema는 frontend\prisma\schema.prisma)   
 npx prisma generate
 
-:: (테이블 아직이면) 스키마 반영
+:: (테이블 아직이면) 스키마 반영   
 npx prisma migrate dev
 
 3. npm run dev로 서버 실행 - 로컬호스트주소로 접속
