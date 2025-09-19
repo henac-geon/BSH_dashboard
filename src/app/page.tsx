@@ -139,7 +139,7 @@ export default function SurveyPage() {
       <form onSubmit={onSubmit} className="space-y-4">
         {/* 가게명 */}
         <L label="가게명" required error={errors.name}>
-          <I name="name" placeholder="예: 무종카페" className={cls(inputBase, "name")} />
+          <I name="name" placeholder="정확이 입력해주세요." className={cls(inputBase, "name")} />
         </L>
 
         {/* 업종 (음식점 전용 자동완성) */}
@@ -147,19 +147,19 @@ export default function SurveyPage() {
           <IndustryAutocomplete
             name="industry"
             codeName="industryCode"
-            placeholder="(음식점 전용) 예: 카페/치킨/분식…"
+            placeholder="최대한 비슷한 음식 종류를 선택해 주세요."
             className={cls(inputBase, "industry")}
           />
         </L>
 
         {/* 주소 */}
         <L label="주소" required error={errors.address}>
-          <I name="address" placeholder="예: 대구광역시 중구 동성로 123" className={cls(inputBase, "address")} />
+          <I name="address" placeholder="도로명 주소를 추천할게요." className={cls(inputBase, "address")} />
         </L>
 
         {/* 연락처 */}
         <L label="연락처" required error={errors.phone}>
-          <I name="phone" placeholder="예: 010-1234-5678" className={cls(inputBase, "phone")} />
+          <I name="phone" placeholder="-를 빼고 입력하여주세요" className={cls(inputBase, "phone")} />
         </L>
 
         {/* 영업시간 */}
